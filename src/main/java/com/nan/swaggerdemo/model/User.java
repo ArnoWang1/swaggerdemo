@@ -9,14 +9,16 @@ import java.io.Serializable;
  */
 public class User implements Serializable {
 
-    @ApiModelProperty("用户id")
+    @ApiModelProperty(value = "用户id", example = "23", required = true)
     private Long id;
 
-    @ApiModelProperty("用户名称")
+    @ApiModelProperty(value = "用户名称", example = "张三", required = true)
     private String name; //用户名称
 
-    @ApiModelProperty("用户年龄")
+    @ApiModelProperty(value = "用户年龄", example = "23")
     private Integer age; //用户年龄
+
+    private Contact contact;
 
     public User() {
     }
@@ -49,5 +51,13 @@ public class User implements Serializable {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public Contact getContact() {
+        return contact;
+    }
+
+    public void setContact(Contact contact) {
+        this.contact = contact;
     }
 }

@@ -29,12 +29,16 @@ public class Swagger2 {
 
 
     private ApiInfo apiInfo() {
-        ApiInfo apiInfo = new ApiInfoBuilder().title("Spring Boot 整合 swagger ui")
-                .description("Spring Boot 整合 swagger ui项目")
+        ApiInfo apiInfo = new ApiInfoBuilder().title("蛙鸣用户模块API文档")
+                .description("蛙鸣用户添加，用户查询，权限认证模块API文档，异常统一信息" +
+                        "\"AjaxResult\": {\n" +
+                        "      \"code\": \"1003\",\n" +
+                        "      \"msg\": \"参数可是错误\"\n" +
+                        "    },")
                 .license("MIT")
                 .licenseUrl("http://opensource.org/licenses/MIT")
-                .contact(new Contact("王金楠", "http://blog.csdn.net/wangjinnan16/article", "wangjinnan16@163.com"))
-                .version("1.0")
+                .contact(new Contact("蛙鸣", "http://waming-air.com/", "wangjinnan16@163.com"))
+                .version("1.0.8")
                 .build();
         return apiInfo;
     }
